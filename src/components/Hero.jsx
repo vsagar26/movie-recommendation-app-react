@@ -6,21 +6,33 @@ const Hero = () => {
 
   const heroItems = items[Math.floor(Math.random() * items.length)];
 
-  const fetchData = () => {
-    fetch(request.requestTrendingMovies)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setItems(data.results);
-      })
-      .catch(() => console.log("Error"));
-  };
-  console.log(heroItems);
+  // const fetchData = () => {
+  //   fetch(request.requestTrendingMovies)
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setItems(data.results);
+  //     })
+  //     .catch(() => console.log("Error"));
+  // };
+  // console.log(heroItems);
+  
+
+  async function fetchData() {
+    try{
+      const response = await fetch(request.requestUpcomingMovies)
+      const trendingMovies = await response.json();
+      setItems(trendingMovies.results) ;
+     }catch(err){
+       console.error(err); 
+     }
+     
+   }
 
   useEffect(() => {
-    return fetchData;
-  }, []);
+   fetchData();
+  },[]);
 
   const truncatedString = (str, num) =>{
     if(str?.length > num){

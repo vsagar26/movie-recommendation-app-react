@@ -19,13 +19,13 @@ const Navbar = () => {
               <a href="/">TV Shows</a>
             </li>
             <li>
-              <a href="/">Movies</a>
+              <a href="/movies">Movies</a>
             </li>
             <li>
-              <a href="/">Recently Addded</a>
+              <a href="/recentlyadded">Recently Addded</a>
             </li>
             <li>
-              <a href="/">My List</a>
+              <a href="/signup">My List</a>
             </li>
           </ul>
         </div>
@@ -33,9 +33,9 @@ const Navbar = () => {
           <div className="text-[22px] mt-2 text-white">
             <FiSearch />
           </div>
-          <button className="bg-[#FF2007] text-white text-[12px] md:text-[16px] px-2 md:px-5 min-w-[70px] max-w-[100px] py-1 rounded">
+          <a href={`/signup`}><button className="bg-[#FF2007] text-white text-[12px] md:text-[16px] px-2 md:px-5 min-w-[70px] max-w-[100px] py-1 rounded">
             Sign In
-          </button>
+          </button></a>
         </div>
       </nav>
     </div>

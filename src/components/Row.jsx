@@ -5,16 +5,31 @@ import { AiOutlineLeftCircle, AiOutlineRightCircle } from "react-icons/ai";
 const Row = ({ title, fetchURL, rowID }) => {
   const [movies, setMovies] = useState([]);
 
-  const moviesRows = () => {
-    fetch(fetchURL)
-      .then((response) => response.json())
-      .then((data) => setMovies(data.results))
-      .catch(() => console.log("Error"));
-  };
+  // const moviesRows = async () => {
+  //   const fetchData = await fetch(fetchURL)
+  //     const Response = fetchData.json()
+  //     .then((data) => setMovies(data.results))
+  //     .catch(() => console.log("Error"));
+
+  //     console.log(Response)
+  // };
+
+  async function fetchUsers() {
+    try{
+      const response = await fetch(fetchURL)
+      const users = await response.json();
+      setMovies(users.results) ;
+     }catch(err){
+       console.error(err); 
+     }
+   }
+
+   
 
   useEffect(() => {
-    return moviesRows;
-  }, [fetchURL]);
+    // return moviesRows;
+    fetchUsers()
+  }, []);
 
   const sliderLeft = () =>{
     const slider = document.getElementById("slider" + rowID);
@@ -40,7 +55,7 @@ const Row = ({ title, fetchURL, rowID }) => {
           className="relative flex items-center w-full h-full whitespace-nowrap scroll-smooth  overflow-x-hidden"
         >
           {movies?.map((item, id) => (
-            <Movie key={id} item={item} />
+            <Movie key={id} id={id} item={item} />
           ))}
         </div>
         <AiOutlineRightCircle onClick={sliderRight} className="text-[40px] text-white ml-2 cursor-pointer opacity-50 hover:opacity-100 mt-6 md:mt-16"/>
