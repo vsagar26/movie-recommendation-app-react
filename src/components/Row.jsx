@@ -5,14 +5,6 @@ import { AiOutlineLeftCircle, AiOutlineRightCircle } from "react-icons/ai";
 const Row = ({ title, fetchURL, rowID }) => {
   const [movies, setMovies] = useState([]);
 
-  // const moviesRows = async () => {
-  //   const fetchData = await fetch(fetchURL)
-  //     const Response = fetchData.json()
-  //     .then((data) => setMovies(data.results))
-  //     .catch(() => console.log("Error"));
-
-  //     console.log(Response)
-  // };
 
   async function fetchUsers() {
     try{
@@ -27,7 +19,6 @@ const Row = ({ title, fetchURL, rowID }) => {
    
 
   useEffect(() => {
-    // return moviesRows;
     fetchUsers()
   }, []);
 

@@ -1,6 +1,5 @@
 import React from "react";
-import Hero from "../components/Hero";
-import Row from "../components/Row";
+import { Row, Hero} from "../components";
 import { request } from "../components/requests";
 
 const Home = () => {

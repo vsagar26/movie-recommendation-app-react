@@ -6,11 +6,11 @@ const Navbar = () => {
     <div>
       <nav className="flex flex-row justify-around gap-8 md:gap-20 py-6 fixed w-[100vw] bg-transparent z-[100]">
         <div className="flex flex-row gap-8">
-          <img
+          <a href="/"><img
             className="ml-2 md:ml-0 mr-2 md:mr-12 h-[24px] md:h-[40px]"
             src={logo}
             alt="logo"
-          />
+          /></a>
           <ul className="flex flex-row gap-4 md:gap-8 mt-2 text-[12px] md:text-[17px] font-medium text-white">
             <li>
               <a href="/">Home</a>
