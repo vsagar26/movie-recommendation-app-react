@@ -1,13 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {
-  Navbar,
-  Home,
-  MovieDetail,
-  Signup,
-  RecentlyAdded,
-  Footer,
-} from "./components";
+import { Navbar, Home, MovieDetail, Signup, RecentlyAdded } from "./components";
 
 function App() {
   return (
@@ -20,7 +13,6 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/recentlyadded" element={<RecentlyAdded />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </div>
   );
