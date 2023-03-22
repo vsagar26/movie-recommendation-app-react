@@ -1,5 +1,5 @@
 import { FiSearch } from "react-icons/fi";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.svg";
 
 const Navbar = () => {
   return (
@@ -25,7 +25,7 @@ const Navbar = () => {
               <a href="/recentlyadded">Recently Addded</a>
             </li>
             <li>
-              <a href="/signup">My List</a>
+              <a href="/signin">My List</a>
             </li>
           </ul>
         </div>
@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className="text-[22px] mt-2 text-white">
             <FiSearch />
           </div>
-          <a href={`/signup`}><button className="bg-[#FF2007] text-white text-[12px] md:text-[16px] px-2 md:px-5 min-w-[70px] max-w-[100px] py-1 rounded">
+          <a href={`/signin`}><button className="bg-[#FF2007] text-white text-[12px] md:text-[16px] px-2 md:px-5 min-w-[70px] max-w-[100px] py-1 rounded">
             Sign In
           </button></a>
         </div>
