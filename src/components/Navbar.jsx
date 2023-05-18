@@ -16,10 +16,7 @@ const Navbar = () => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/">TV Shows</a>
-            </li>
-            <li>
-              <a href="/movies">Movies</a>
+              <a href="/category">Categories</a>
             </li>
             <li>
               <a href="/recentlyadded">Recently Addded</a>
@@ -30,7 +27,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex flex-row gap-2 md:gap-12 ">
-          <div className="text-[22px] mt-2 text-white">
+          <div className="text-[22px] mt-2 text-white cursor-pointer">
             <FiSearch />
           </div>
           <a href={`/signin`}><button className="bg-[#FF2007] text-white text-[12px] md:text-[16px] px-2 md:px-5 min-w-[70px] max-w-[100px] py-1 rounded">

@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Navbar, Home, MovieDetail, Signin, RecentlyAdded, Signup } from "./components";
+import { Navbar, Home, MovieDetail, Signin, RecentlyAdded, Signup, Category } from "./components";
+
+
 
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
           <Route path="/watch/:id" element={<MovieDetail />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/category" element={<Category />} />
           <Route path="/recentlyadded" element={<RecentlyAdded />} />
         </Routes>
       </BrowserRouter>

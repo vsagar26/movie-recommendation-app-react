@@ -1,4 +1,4 @@
-const apiKey = "3a994fbcec90554936de6a34bea370e9";
+const apiKey = "3a994fbcec90554936de6a34bea370e9"
 
 export const request = {
   requestTrendingMovies: `https://api.themoviedb.org/3/trending/all/day?api_key=${apiKey}`,

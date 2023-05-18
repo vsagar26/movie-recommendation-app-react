@@ -7,6 +7,7 @@ import Row from "./Row"
 import Hero from "./Hero"
 import Footer from "./Footer";
 import Signup from "./Signup";
+import Category from "./Category";
 
 
-export { Navbar, Home, MovieDetail, Signin, RecentlyAdded, Row, Hero, Footer, Signup };
+export { Navbar, Home, MovieDetail, Signin, RecentlyAdded, Row, Hero, Footer, Signup,Category };
